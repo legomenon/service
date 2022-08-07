@@ -1,9 +1,11 @@
 SHELL := /bin/bash
 
+# expvarmon -ports=":4000" -vars="build,requests,goroutines,errors,panics,mem:memstats.Alloc"
+
 VERSION := 1.0
 
 run:
-	go run app/services/sales-api/*  | go run app/tooling/logfmt/main.go
+	go run app/services/sales-api/* | go run app/tooling/logfmt/main.go
 
 all: sales-api
 
