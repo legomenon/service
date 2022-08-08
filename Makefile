@@ -56,5 +56,6 @@ kind-describe:
 	kubectl describe pod -l app=sales
 
 kind-update: all kind-load kind-restart
+kind-update-apply: all kind-load kind-apply
 
 # .PHONY: run sales kind-up kind-down kind-status
