@@ -19,13 +19,11 @@ func Respond(ctx context.Context, w http.ResponseWriter, data any, statusCode in
 
 	w.Header().Set("Content-Type", "application/json")
 
-
 	w.WriteHeader(statusCode)
-
 
 	if _, err := w.Write(jsonData); err != nil {
 		return err
 	}
-	z
+
 	return nil
 }
